@@ -4,12 +4,10 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class PostSeeder extends Seeder
 {
     public function run()
     {
-        $this->call([
-            PostSeeder::class
-        ]);
+        \App\Models\Post::factory(500)->create();
     }
 }
