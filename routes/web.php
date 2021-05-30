@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CounterController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,6 @@ Route::get('/', function () {
 });
 
 Route::get('/counter', [CounterController::class, "index"])->name('counter.index');
+
+Route::get('/admin', [AdminController::class, "index"])->name('admin.index');
+Route::view('/admin/posts', \App\Http\Livewire\Post\Index::class)->name('admin.post.index');

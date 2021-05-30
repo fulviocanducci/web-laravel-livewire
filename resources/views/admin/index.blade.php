@@ -1,0 +1,1 @@
+<x-admin.index></x-admin.index>
